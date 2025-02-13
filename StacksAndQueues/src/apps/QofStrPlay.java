@@ -1,23 +1,30 @@
 package apps;
-import adts.ArrayQOfStringsFF0;
+import adts.ArrayQofStringsFF0;
 
 public class QofStrPlay {
 
 	public static void main(String[] args) {
-
-		ArrayQOfStringsFF0 myQ = new ArrayQOfStringsFF0();
-		System.out.println(myQ.isEmpty() ? "myQ is empty" : "myQ is not empty");
-
+		
+		ArrayQofStringsFF0 myQ = new ArrayQofStringsFF0();
+		System.out.println(myQ.isEmpty() ? "empty" : "not empty");
+		// System.out.println(myQ.isEmpty());
+		/*
+		myQ.enqueue("Li");
+		myQ.enqueue("H");
+		myQ.enqueue("Be");
+		myQ.enqueue("H");
+		*/
 		myQ.enqueue("cat");
 		myQ.enqueue("bird");
 		myQ.enqueue("dog");
-		System.out.println(myQ);  // Li H Be H
+		System.out.println(myQ.isEmpty() ? "empty" : "not empty");
+		System.out.println(myQ);  // cat bird dog
 		myQ.dequeue();
-		System.out.println("after one dequeue -" + myQ);
+		System.out.println("after one dequeue - " + myQ);  // bird dog
 		myQ.dequeue();
-		System.out.println("after two dequeue -" + myQ);
-		myQ.dequeue();
-		System.out.println("after three dequeue -" + myQ);
+		System.out.println("after second dequeue - " + myQ);  // dog
+		System.out.println("should be dog: " + myQ.dequeue());
+		System.out.println("after third dequeue - " + myQ);  // 
 		
 		/* /
 		System.out.println(myQ.isEmpty() ? "myQ is empty" : "myQ is not empty");

@@ -5,7 +5,7 @@ import adts.*;
 public class QPlay {
 
 	public static void main(String[] args) {
-		/*
+		
 		ArrayQueueFF0<String> myQ = new ArrayQueueFF0<>();
 		// LLQ<String> myQ = new LLQ();
 		
@@ -15,8 +15,8 @@ public class QPlay {
 		myQ.enqueue("Braves");
 		myQ.enqueue("Marlins");
 		System.out.println(myQ);
+
 		
-		/* /
 		System.out.println(myQ.isEmpty() ? "myQ is empty" : "myQ is not empty");
 		System.out.println(myQ.isFull()  ? "myQ is full"  : "myQ is not full");
 		System.out.println(myQ.dequeue());  // explicitly test dequeue return value
@@ -44,7 +44,6 @@ public class QPlay {
 		System.out.println(myIntQ);
 		System.out.println(myIntQ.isEmpty() ? "It's empty now!" : "How did I get here?");
 
-		*/
 	}
 
 }
