@@ -6,8 +6,8 @@ public class StackPlay {
 
 	public static void main(String[] args) {
 
-		//LLStack<String> myStack = new LLStack<>();
-		ArrayStack<String> myStack = new ArrayStack<>();
+		LLStack<String> myStack = new LLStack<>();
+		//ArrayStack<String> myStack = new ArrayStack<>();
 		
 		System.out.println(myStack);
 		System.out.println(myStack.isEmpty() ? "stack is empty" : "stack is not empty");
