@@ -1,0 +1,152 @@
+### **Mid-Term Exam Study Guide – COMP-228**
+
+This guide will help you study for your exam by summarizing key topics, providing a structured approach to understanding concepts, and offering memory aids and study techniques.
+
+---
+
+## **1. General ADT (Abstract Data Type) Concepts**
+- **Definition**: An ADT is a model for a data structure that defines operations but does not specify implementation.
+- **Perspectives**:
+  - **Logical Level**: What the ADT does (e.g., a queue follows FIFO).
+  - **Implementation Level**: How the ADT is implemented (e.g., using arrays or linked lists).
+- **Common ADTs**: Lists, Stacks, Queues, Trees, Graphs.
+- **Execution Time Complexity (Big-O)**:
+  - **O(1) – Constant Time**: Accessing an array element.
+  - **O(log n) – Logarithmic Time**: Binary search.
+  - **O(n) – Linear Time**: Searching in an unsorted list.
+  - **O(n log n) – Log-Linear Time**: Merge sort.
+  - **O(n²) – Quadratic Time**: Bubble sort.
+  - **O(2^n) – Exponential Time**: Recursive Fibonacci calculation.
+
+📝 **Memory Tip**: Relate Big-O to real-life tasks. Searching an unsorted list (O(n)) is like looking through a messy room, while binary search (O(log n)) is like searching a sorted bookshelf.
+
+---
+
+## **2. Java Generics, Interfaces, and References**
+- **Generics**: Allow classes and methods to operate on parameterized types, e.g.,
+  ```java
+  public class Box<T> {
+      private T item;
+      public void setItem(T item) { this.item = item; }
+      public T getItem() { return item; }
+  }
+  ```
+- **Interfaces**: Define a contract that implementing classes must follow.
+  ```java
+  public interface StackInterface<T> {
+      void push(T item);
+      T pop();
+      boolean isEmpty();
+  }
+  ```
+- **References**: Store memory addresses rather than actual data.
+  ```java
+  Object obj = new Object();
+  Object obj2 = obj; // obj2 references the same object as obj
+  ```
+
+🎯 **Study Tip**: Write out example code for generics and interfaces to reinforce your understanding.
+
+---
+
+## **3. Linked Lists**
+- **Singly Linked List**: Each node points to the next; efficient for inserts/deletes but slow for access.
+  ```java
+  class Node {
+      int data;
+      Node next;
+  }
+  ```
+- **Doubly Linked List**: Nodes have links to both previous and next.
+- **Circular Linked List**: Last node links back to the first.
+
+✍ **Practice Exercise**: Draw linked lists and trace insert/delete operations.
+
+---
+
+## **4. Stacks and Queues**
+### **Stack (LIFO - Last In, First Out)**
+- Operations:
+  - **push()**: Add an item to the top.
+  - **pop()**: Remove the top item.
+  - **peek()**: Look at the top item.
+- Implementations:
+  - **Array-Based**: Uses an array with a top index.
+  - **Linked List-Based**: Uses nodes with a head pointer.
+
+### **Queue (FIFO - First In, First Out)**
+- Operations:
+  - **enqueue()**: Add item to the rear.
+  - **dequeue()**: Remove item from the front.
+- Implementations:
+  - **Array-Based**: Uses an array with front/rear indices.
+  - **Linked List-Based**: Uses nodes with head/tail pointers.
+
+🚀 **Memory Trick**: Think of a stack like a stack of plates (LIFO) and a queue like a line at a store (FIFO).
+
+---
+
+## **5. List ADT and Implementations**
+- **ListInterface.java** defines common operations:
+  - Insert, delete, search, traverse.
+- **Unsorted vs. Sorted Lists**:
+  - **Unsorted**: Items are stored in the order they are added.
+  - **Sorted**: Items are stored in a specific order (e.g., ascending).
+
+### **Binary Search (Only for Sorted Lists)**
+- If `mid` value is the target, return index.
+- If `target < mid`, search left half.
+- If `target > mid`, search right half.
+- Runs in **O(log n)** time.
+
+🎯 **Study Strategy**: Implement a small list class with different operations to reinforce learning.
+
+---
+
+## **6. Error Handling and Conditions for Failures**
+- **Stack Overflow**: Trying to push into a full stack.
+- **Stack Underflow**: Trying to pop from an empty stack.
+- **Queue Overflow**: Trying to enqueue into a full queue.
+- **Queue Underflow**: Trying to dequeue from an empty queue.
+
+📝 **Memory Trick**: Think of an elevator—overflow happens when it’s full, underflow happens when it’s empty.
+
+---
+
+## **7. Study Techniques**
+### **Active Recall**
+- Instead of passively reading, ask yourself questions:
+  - What’s the difference between stacks and queues?
+  - What is the runtime of binary search?
+  - How do you implement a linked list?
+- Answering these helps with long-term retention.
+
+### **Flashcards**
+- Use **Anki** or **Quizlet** to create flashcards for terms, operations, and Big-O complexities.
+
+### **Handwriting Code**
+- Type out implementations, then write them by hand to reinforce memory.
+
+### **Teaching Someone Else**
+- Explain key concepts to a friend, family member, or even a stuffed animal.
+
+### **Timed Quizzes**
+- Set a timer and try to write out:
+  - A simple stack implementation.
+  - A binary search function.
+  - An enqueue and dequeue operation.
+
+### **Mind Maps**
+- Draw connections between concepts, like how linked lists are used in stacks and queues.
+
+---
+
+## **Final Review Checklist**
+✅ Understand ADT perspectives and Big-O complexity.  
+✅ Practice implementing stacks, queues, and linked lists.  
+✅ Review ListInterface.java, StackInterface.java, and QueueInterface.java.  
+✅ Identify conditions that cause operations to fail.  
+✅ Use memory techniques (mnemonics, mind maps, flashcards).  
+✅ Do coding exercises and mock quizzes.  
+
+💡 **Final Tip**: Stay calm and confident. You got this! 💪
